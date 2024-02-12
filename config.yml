@@ -1,0 +1,38 @@
+profiles:
+  "gpt-4-turbo-preview":
+    llm:
+      model: "gpt-4-turbo-preview"
+      temperature: 0.0
+
+  "gpt-4":
+    llm:
+      model: "gpt-4"
+      temperature: 0.0
+
+  "gpt-3.5-turbo":
+    llm:
+      model: "gpt-3.5-turbo"
+      temperature: 0.0
+
+  "bedrock/anthropic.claude-instant-v1":
+    aws_profile: default
+    llm:
+      model: "bedrock/anthropic.claude-instant-v1"
+      temperature: 0.0
+      context_window: 100000
+  custom_instructions: "The user has set you to FAST mode. **No talk, just code.** Be as brief as possible. No comments, no unnecessary messages. Assume as much as possible, rarely ask the user for clarification. Once the task has been completed, say 'The task is done.'" # This will be appended to the system message
+  
+  "bedrock/anthropic.claude-v2":
+    aws_profile: default
+    llm:
+      model: "bedrock/anthropic.claude-v2"
+      temperature: 0.0
+      context_window: 100000
+    custom_instructions: "The user has set you to FAST mode. **No talk, just code.** Be as brief as possible. No comments, no unnecessary messages. Assume as much as possible, rarely ask the user for clarification. Once the task has been completed, say 'The task is done.'" # This will be appended to the system message
+
+  "ollama/llama2":
+    llm:
+      model: "ollama/llama2"
+      temperature: 0.0
+
+default_profile: "gpt-4"

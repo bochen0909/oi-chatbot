@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "oi-chatbot"
+version = "0.1.0"
+description = ""
+authors = ["Bo Chen <bo.chen@usfoods.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+gradio = "^4.17.0"
+open-interpreter = "^0.2.0"
+
+
+[tool.poetry.group.aws.dependencies]
+boto3 = "^1.34.37"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
